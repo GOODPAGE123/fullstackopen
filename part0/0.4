@@ -7,12 +7,14 @@ sequenceDiagram
     server-->>browser: HTML document
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that sends the user input to the JSON on the server
+    Note right of browser: The browser sends the form data to the server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: HTML documeent
     deactivate server
+
+    Note right of browser: The browser reloads the page
 
     browser-->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
@@ -31,5 +33,5 @@ sequenceDiagram
     server-->>browser: [{content: "Haiii", date: "2025-09-22T14:30:46.078Z"},…]
     deactivate server
 
-    Note right of browser: The broswer executes the callback function that renders the notes
+    Note right of browser: The browser executes the callback function that renders the notes
     
